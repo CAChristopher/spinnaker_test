@@ -26,7 +26,6 @@ spec:
         imagePullPolicy: Always
         name: apache_test
         ports:
-        
         - containerPort: 9000
           protocol: TCP
         terminationMessagePath: /dev/termination-log
