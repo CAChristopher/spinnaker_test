@@ -22,7 +22,7 @@ spec:
       name: apache-test
     spec:
       containers:
-      - image: akkeris/apache_test
+      - image: akkeris/apachetest
         imagePullPolicy: Always
         name: apache-test
         ports:
