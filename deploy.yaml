@@ -26,15 +26,8 @@ spec:
         imagePullPolicy: Always
         name: apache_test
         ports:
-        - containerPort: 3000
+        - containerPort: 9000
           protocol: TCP
-        resources:
-          limits:
-            cpu: 1000m
-            memory: 512Mi
-          requests:
-            cpu: 50m
-            memory: 256Mi
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
       dnsPolicy: ClusterFirst
