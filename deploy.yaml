@@ -2,14 +2,14 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    name: akkeris-ui
-  name: akkeris-ui
+    name: apache_test
+  name: apache_test
   namespace: akkeris-system
 spec:
   replicas: 2
   selector:
     matchLabels:
-      name: akkeris-ui
+      name: apache_test
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -18,13 +18,13 @@ spec:
   template:
     metadata:
       labels:
-        name: akkeris-ui
-      name: akkeris-ui
+        name: apache_test
+      name: apache_test
     spec:
       containers:
         image: akkeris/apache_test:latest
         imagePullPolicy: Always
-        name: akkeris-ui
+        name: apache_test
         ports:
         - containerPort: 3000
           protocol: TCP
