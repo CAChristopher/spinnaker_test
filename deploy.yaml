@@ -26,7 +26,7 @@ spec:
         imagePullPolicy: Always
         name: apache-test
         ports:
-        - containerPort: 9000
+        - containerPort: 8080
           protocol: TCP
         resources:
           limits:
@@ -57,7 +57,7 @@ spec:
   - name: tcp
     port: 80
     protocol: TCP
-    targetPort: 9000
+    targetPort: 8080
   selector:
     name: apache-test
   sessionAffinity: None
